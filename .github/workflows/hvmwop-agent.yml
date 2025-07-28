@@ -45,7 +45,6 @@ jobs:
         run: pip install openai pyyaml
 
       - name: Run sync agent
-        run: python automation/hvmwop-sync-agent.py
-        env:
+         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-
+         run: python automation/hvmwop-sync-agent.py
