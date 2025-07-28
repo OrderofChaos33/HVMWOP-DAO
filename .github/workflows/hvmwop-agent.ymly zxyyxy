@@ -1,4 +1,4 @@
-name: M- HVMWOP Sync Agent
+name: 🧠 HVMWOP Sync Agent
 
 on:
   workflow_dispatch:
@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -23,3 +22,7 @@ jobs:
         run: python automation/hvmwop-sync-agent.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        run: python automation/hvmwop-sync-agent.py
+
